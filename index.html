@@ -41,16 +41,25 @@
       font-weight: 600;
       margin-bottom: 10px;
     }
-    audio {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      z-index: 1000;
-    }
     .container {
       background: none;
       padding: 20px;
       border-radius: 20px;
+    }
+    #masuk-section {
+      background: rgba(0, 0, 0, 0.6);
+      flex-direction: column;
+    }
+    #masuk-button {
+      padding: 15px 30px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
     }
   </style>  <style>
     .snowflake {
@@ -73,6 +82,12 @@
       }
     }
   </style>  <script>
+    function startMusic() {
+      const music = document.getElementById("bgMusic");
+      music.play();
+      document.getElementById("masuk-section").style.display = "none";
+      document.body.style.overflowY = 'scroll';
+    }
     document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < 40; i++) {
         let flake = document.createElement('div');
@@ -85,8 +100,14 @@
       }
     });
   </script></head>
-<body>
-  <audio controls autoplay loop>
+<body style="overflow-y: hidden;">
+  <section id="masuk-section" class="container" style="position: fixed; inset: 0; z-index: 9999; display: flex;">
+    <div>
+      <h2>Undangan Pernikahan</h2>
+      <h1>Prasetiyo ❤️ Sundari</h1>
+      <button id="masuk-button" onclick="startMusic()">Buka Undangan</button>
+    </div>
+  </section>  <audio id="bgMusic" loop>
     <source src="musik.mp3" type="audio/mpeg">
     Browser tidak mendukung audio.
   </audio>  <section>
