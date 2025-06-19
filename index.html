@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Prasetiyo ❤️ Sundari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      font-family: 'Poppins', sans-serif;
+    }
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+      width: 100vw;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 2px black;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    h2, h3 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    audio {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 20px;
+    }
+  </style>
+
+  <style>
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      z-index: 9999;
+      color: white;
+      font-size: 1.5em;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      for (let i = 0; i < 40; i++) {
+        let flake = document.createElement('div');
+        flake.classList.add('snowflake');
+        flake.innerHTML = '❀';
+        flake.style.left = Math.random() * 100 + 'vw';
+        flake.style.animationDuration = 5 + Math.random() * 5 + 's';
+        flake.style.fontSize = (1 + Math.random() * 1.5) + 'em';
+        document.body.appendChild(flake);
+      }
+    });
+  </script>
+</head>
+<body>
+  <audio controls autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+    Browser tidak mendukung audio.
+  </audio>
+
+  <section>
+    <div class="container">
+      <h2>Dengan kasih dan anugerah Tuhan</h2>
+      <p><em>"Demikian mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."</em></p>
+      <p>— Matius 19:6</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h1>Prasetiyo ❤️ Sundari</h1>
+      <p>Putra dari Bapak Yohanes Patio & Ibu Sutarti</p>
+      <p>Putri dari Bapak Wasito & Ibu Robiyah</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Resepsi Pernikahan</h2>
+      <p><strong>Tanggal:</strong> Rabu, 25 Juni 2025</p>
+      <p><strong>Waktu:</strong> 09.00 – 11.00 WIB</p>
+      <p><strong>Tempat:</strong> Gereja GKJ Suberejo</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Terima Kasih</h2>
+      <p>Kehadiran & doa restu Anda sangat berarti bagi kami.</p>
+      <p>Tuhan memberkati.</p>
+    </div>
+  </section>
+</body>
+</html>
